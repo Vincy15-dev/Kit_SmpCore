@@ -1,834 +1,302 @@
-# Kit_SmpCore - Configurazione Kit
-# Sistema di kit a tema cosmico con 5 tier progressivi
-
-# ============================================
-# PRESETS - Mappe di enchant riutilizzabili
-# ============================================
-# Le chiavi sono registry key vanilla (es. "minecraft:protection")
+# Kit_SmpCore - Kits Configuration
 presets:
   P4U3M:
-    minecraft:protection: 4
-    minecraft:unbreaking: 3
-    minecraft:mending: 1
+    protection: 4
+    unbreaking: 3
+    mending: 1
   BP4U3M:
-    minecraft:blast_protection: 4
-    minecraft:unbreaking: 3
-    minecraft:mending: 1
+    blast_protection: 4
+    unbreaking: 3
+    mending: 1
   SWORD_MAX:
-    minecraft:sharpness: 5
-    minecraft:fire_aspect: 2
-    minecraft:looting: 3
-    minecraft:sweeping_edge: 3
-    minecraft:unbreaking: 3
-    minecraft:mending: 1
+    sharpness: 5
+    fire_aspect: 2
+    looting: 3
+    sweeping_edge: 3
+    unbreaking: 3
+    mending: 1
   AXE_MAX:
-    minecraft:sharpness: 5
-    minecraft:efficiency: 5
-    minecraft:unbreaking: 3
-    minecraft:mending: 1
+    sharpness: 5
+    efficiency: 5
+    unbreaking: 3
+    mending: 1
   MACE_BREACH:
-    minecraft:breach: 4
-    minecraft:wind_burst: 3
-    minecraft:fire_aspect: 2
-    minecraft:unbreaking: 3
-    minecraft:mending: 1
+    breach: 4
+    wind_burst: 3
+    fire_aspect: 2
+    unbreaking: 3
+    mending: 1
   MACE_DENSITY:
-    minecraft:density: 5
-    minecraft:wind_burst: 3
-    minecraft:fire_aspect: 2
-    minecraft:unbreaking: 3
-    minecraft:mending: 1
+    density: 5
+    wind_burst: 3
+    fire_aspect: 2
+    unbreaking: 3
+    mending: 1
   BOW_MAX:
-    minecraft:power: 5
-    minecraft:punch: 2
-    minecraft:flame: 1
-    minecraft:infinity: 1
-    minecraft:unbreaking: 3
+    power: 5
+    punch: 2
+    flame: 1
+    infinity: 1
+    unbreaking: 3
   UM:
-    minecraft:unbreaking: 3
-    minecraft:mending: 1
+    unbreaking: 3
+    mending: 1
   HELM_X:
-    minecraft:respiration: 3
-    minecraft:aqua_affinity: 1
+    respiration: 3
+    aqua_affinity: 1
   LEG_X:
-    minecraft:swift_sneak: 3
+    swift_sneak: 3
   BOOT_X:
-    minecraft:feather_falling: 4
-    minecraft:depth_strider: 3
+    feather_falling: 4
+    depth_strider: 3
   BOOT_S:
-    minecraft:feather_falling: 4
-    minecraft:soul_speed: 3
+    feather_falling: 4
+    soul_speed: 3
 
-# ============================================
-# KIT 1: STELLA NASCENTE
-# ============================================
 kits:
-  - id: "stella_nascente"
+  stella_nascente:
     display-name: "&6&lStella Nascente"
-    tier-label: "&eTIER I - Diamond CPVP"
+    tier-label: "&7TIER I - Diamond CPVP"
     description:
       - "&7Kit iniziale per sopravvivenza CPVP"
-      - "&7Armatura diamond, armi base e rifornimenti essenziali"
-    icon: GLOWSTONE_DUST
+      - "&7Armatura diamond con enchant base"
+    icon: "GLOWSTONE_DUST"
     color-from: "#FFD66B"
     color-to: "#FF9E4A"
     permission: "kit.stella_nascente"
     default-permission: true
     cooldown: 86400
     announce-claim: false
-    locked-hint: "&cCompleta le missioni per sbloccare il rank Stella!"
-    delivery: direct
+    locked-hint: "&cSblocca il rank Stella Nascente"
+    delivery: "direct"
     equipment:
-      helmet:
-        material: DIAMOND_HELMET
-        preset: P4U3M
-        enchants:
-          minecraft:aqua_affinity: 1
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      chestplate:
-        material: DIAMOND_CHESTPLATE
-        preset: P4U3M
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      leggings:
-        material: DIAMOND_LEGGINGS
-        preset: P4U3M
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      boots:
-        material: DIAMOND_BOOTS
-        preset: P4U3M
-        enchants:
-          minecraft:feather_falling: 4
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      offhand:
-        material: SHIELD
-        preset: UM
-        mark: true
-        flags: [HIDE_ENCHANTS]
+      helmet: {material: "DIAMOND_HELMET", preset: "P4U3M", enchants: {aqua_affinity: 1}, mark: true}
+      chestplate: {material: "DIAMOND_CHESTPLATE", preset: "P4U3M", mark: true}
+      leggings: {material: "DIAMOND_LEGGINGS", preset: "P4U3M", mark: true}
+      boots: {material: "DIAMOND_BOOTS", preset: "P4U3M", enchants: {feather_falling: 4}, mark: true}
+      offhand: {material: "SHIELD", preset: "UM", mark: true}
     items:
-      - material: DIAMOND_SWORD
-        name: "&6Spada Stellare"
-        lore:
-          - "&8| &fKit Stella Nascente"
-        preset: ""
-        enchants:
-          minecraft:sharpness: 4
-          minecraft:unbreaking: 3
-          minecraft:mending: 1
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      - material: DIAMOND_AXE
-        name: "&6Ascia Stellare"
-        lore:
-          - "&8| &fKit Stella Nascente"
-        preset: ""
-        enchants:
-          minecraft:sharpness: 4
-          minecraft:efficiency: 4
-          minecraft:unbreaking: 3
-          minecraft:mending: 1
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      - material: BOW
-        name: "&6Arco Stellare"
-        lore:
-          - "&8| &fKit Stella Nascente"
-        preset: ""
-        enchants:
-          minecraft:power: 4
-          minecraft:infinity: 1
-          minecraft:unbreaking: 3
-        mark: true
-        flags: [HIDE_ENCHANTS]
-      - material: ARROW
-        amount: 16
-      - material: END_CRYSTAL
-        amount: 16
-      - material: OBSIDIAN
-        amount: 32
-      - material: TOTEM_OF_UNDYING
-        amount: 2
-      - material: GOLDEN_APPLE
-        amount: 16
-      - material: ENDER_PEARL
-        amount: 8
-      - material: EXPERIENCE_BOTTLE
-        amount: 16
-      - material: COOKED_BEEF
-        amount: 32
-      - material: SPLASH_POTION
-        potion: minecraft:strong_healing
-        amount: 2
-    commands: []
+      - {material: "DIAMOND_SWORD", enchants: {sharpness: 4, unbreaking: 3, mending: 1}, mark: true}
+      - {material: "DIAMOND_AXE", enchants: {sharpness: 4, efficiency: 4, unbreaking: 3, mending: 1}, mark: true}
+      - {material: "BOW", enchants: {power: 4, infinity: 1, unbreaking: 3}, mark: true}
+      - {material: "ARROW", amount: 16}
+      - {material: "END_CRYSTAL", amount: 16}
+      - {material: "OBSIDIAN", amount: 32}
+      - {material: "TOTEM_OF_UNDYING", amount: 2}
+      - {material: "GOLDEN_APPLE", amount: 16}
+      - {material: "ENDER_PEARL", amount: 8}
+      - {material: "EXPERIENCE_BOTTLE", amount: 16}
+      - {material: "COOKED_BEEF", amount: 32}
+      - {material: "SPLASH_POTION", amount: 2, potion: "strong_healing"}
 
-  # ============================================
-  # KIT 2: STELLA
-  # ============================================
-  - id: "stella"
+  stella:
     display-name: "&b&lStella"
-    tier-label: "&3TIER II - Netherite CPVP"
+    tier-label: "&bTIER II - Netherite CPVP"
     description:
-      - "&7Kit avanzato con armatura netherite"
-      - "&7Attrezzatura completa per battaglie intense"
-    icon: NETHER_STAR
+      - "&7Kit netherite completo per CPVP"
+      - "&7Include cristalli, totem e pozioni"
+    icon: "NETHER_STAR"
     color-from: "#7DD3FC"
     color-to: "#E0F2FE"
     permission: "kit.stella"
     default-permission: false
     cooldown: 259200
     announce-claim: false
-    locked-hint: "&cRaggiungi il rank Stella per accedere!"
-    delivery: direct
+    locked-hint: "&cSblocca il rank Stella"
+    delivery: "direct"
     equipment:
-      helmet:
-        material: NETHERITE_HELMET
-        preset: P4U3M
-        enchants:
-          minecraft:respiration: 3
-          minecraft:aqua_affinity: 1
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      chestplate:
-        material: NETHERITE_CHESTPLATE
-        preset: P4U3M
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      leggings:
-        material: NETHERITE_LEGGINGS
-        preset: P4U3M
-        enchants:
-          minecraft:swift_sneak: 3
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      boots:
-        material: NETHERITE_BOOTS
-        preset: P4U3M
-        enchants:
-          minecraft:feather_falling: 4
-          minecraft:depth_strider: 3
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      offhand:
-        material: TOTEM_OF_UNDYING
-        amount: 1
+      helmet: {material: "NETHERITE_HELMET", preset: "P4U3M", enchants: {respiration: 3, aqua_affinity: 1}, mark: true}
+      chestplate: {material: "NETHERITE_CHESTPLATE", preset: "P4U3M", mark: true}
+      leggings: {material: "NETHERITE_LEGGINGS", preset: "P4U3M", enchants: {swift_sneak: 3}, mark: true}
+      boots: {material: "NETHERITE_BOOTS", preset: "P4U3M", enchants: {feather_falling: 4, depth_strider: 3}, mark: true}
+      offhand: {material: "TOTEM_OF_UNDYING"}
     items:
-      - material: NETHERITE_SWORD
-        name: "&bSpada di Stella"
-        lore:
-          - "&8| &fKit Stella"
-        preset: SWORD_MAX
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      - material: NETHERITE_AXE
-        name: "&bAscia di Stella"
-        lore:
-          - "&8| &fKit Stella"
-        preset: AXE_MAX
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      - material: SHIELD
-        preset: UM
-        mark: true
-        flags: [HIDE_ENCHANTS]
-      - material: BOW
-        name: "&bArco di Stella"
-        lore:
-          - "&8| &fKit Stella"
-        preset: BOW_MAX
-        mark: true
-        flags: [HIDE_ENCHANTS]
-      - material: ARROW
-        amount: 32
-      - material: END_CRYSTAL
-        amount: 64
-      - material: OBSIDIAN
-        amount: 64
-      - material: TOTEM_OF_UNDYING
-        amount: 4
-      - material: GOLDEN_APPLE
-        amount: 32
-      - material: ENDER_PEARL
-        amount: 16
-      - material: EXPERIENCE_BOTTLE
-        amount: 32
-      - material: COOKED_BEEF
-        amount: 64
-      - material: SPLASH_POTION
-        potion: minecraft:strong_strength
-        amount: 1
-      - material: SPLASH_POTION
-        potion: minecraft:strong_swiftness
-        amount: 1
-      - material: SPLASH_POTION
-        potion: minecraft:long_fire_resistance
-        amount: 1
-    commands: []
+      - {material: "NETHERITE_SWORD", preset: "SWORD_MAX", mark: true}
+      - {material: "NETHERITE_AXE", preset: "AXE_MAX", mark: true}
+      - {material: "SHIELD", preset: "UM", mark: true}
+      - {material: "BOW", preset: "BOW_MAX", mark: true}
+      - {material: "ARROW", amount: 32}
+      - {material: "END_CRYSTAL", amount: 64}
+      - {material: "OBSIDIAN", amount: 64}
+      - {material: "TOTEM_OF_UNDYING", amount: 4}
+      - {material: "GOLDEN_APPLE", amount: 32}
+      - {material: "ENDER_PEARL", amount: 16}
+      - {material: "EXPERIENCE_BOTTLE", amount: 32}
+      - {material: "COOKED_BEEF", amount: 64}
+      - {material: "SPLASH_POTION", amount: 1, potion: "strong_strength"}
+      - {material: "SPLASH_POTION", amount: 1, potion: "strong_swiftness"}
+      - {material: "SPLASH_POTION", amount: 1, potion: "long_fire_resistance"}
 
-  # ============================================
-  # KIT 3: SUPERNOVA
-  # ============================================
-  - id: "supernova"
+  supernova:
     display-name: "&c&lSupernova"
-    tier-label: "&4TIER III - Elytra & Mace"
+    tier-label: "&eTIER III - Elytra & Mace"
     description:
-      - "&7Kit d'élite con elytra e mazza"
-      - "&7Mobilità aerea e potenza devastante"
-    icon: END_CRYSTAL
+      - "&7Include elytra, mace e shulker box"
+      - "&7Cariche di vento e fuochi d'artificio"
+    icon: "END_CRYSTAL"
     color-from: "#FF6B6B"
     color-to: "#FFB347"
     permission: "kit.supernova"
     default-permission: false
     cooldown: 604800
     announce-claim: false
-    locked-hint: "&cDominia i cieli per sbloccare la Supernova!"
-    delivery: mixed
+    locked-hint: "&cSblocca il rank Supernova"
+    delivery: "gear_direct_plus_shulker"
     equipment:
-      helmet:
-        material: NETHERITE_HELMET
-        preset: P4U3M
-        enchants:
-          minecraft:respiration: 3
-          minecraft:aqua_affinity: 1
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      chestplate:
-        material: NETHERITE_CHESTPLATE
-        preset: P4U3M
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      leggings:
-        material: NETHERITE_LEGGINGS
-        preset: P4U3M
-        enchants:
-          minecraft:swift_sneak: 3
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      boots:
-        material: NETHERITE_BOOTS
-        preset: P4U3M
-        enchants:
-          minecraft:feather_falling: 4
-          minecraft:soul_speed: 3
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      offhand:
-        material: TOTEM_OF_UNDYING
-        amount: 1
+      helmet: {material: "NETHERITE_HELMET", preset: "P4U3M", enchants: {respiration: 3, aqua_affinity: 1}, mark: true}
+      chestplate: {material: "NETHERITE_CHESTPLATE", preset: "P4U3M", mark: true}
+      leggings: {material: "NETHERITE_LEGGINGS", preset: "P4U3M", enchants: {swift_sneak: 3}, mark: true}
+      boots: {material: "NETHERITE_BOOTS", preset: "P4U3M", enchants: {feather_falling: 4, soul_speed: 3}, mark: true}
+      offhand: {material: "TOTEM_OF_UNDYING"}
     items:
-      - material: NETHERITE_SWORD
-        name: "&cLama della Supernova"
-        lore:
-          - "&8| &fKit Supernova"
-        preset: SWORD_MAX
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      - material: MACE
-        name: "&cMazza di Densità"
-        lore:
-          - "&8| &fKit Supernova"
-        preset: MACE_DENSITY
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      - material: ELYTRA
-        preset: UM
-        mark: true
-        flags: [HIDE_ENCHANTS]
-      - material: FIREWORK_ROCKET
-        amount: 64
-        firework-power: 3
-      - material: WIND_CHARGE
-        amount: 64
-      - material: WATER_BUCKET
-        amount: 1
-      - material: SHIELD
-        preset: UM
-        mark: true
-        flags: [HIDE_ENCHANTS]
-      - material: BOW
-        name: "&bArco della Supernova"
-        lore:
-          - "&8| &fKit Supernova"
-        preset: BOW_MAX
-        mark: true
-        flags: [HIDE_ENCHANTS]
-      - material: ARROW
-        amount: 32
+      - {material: "NETHERITE_SWORD", preset: "SWORD_MAX", mark: true}
+      - {material: "MACE", preset: "MACE_DENSITY", mark: true}
+      - {material: "ELYTRA", preset: "UM", mark: true}
+      - {material: "WIND_CHARGE", amount: 64}
+      - {material: "WATER_BUCKET", amount: 1}
+      - {material: "SHIELD", preset: "UM", mark: true}
+      - {material: "BOW", preset: "BOW_MAX", mark: true}
+      - {material: "ARROW", amount: 32}
     containers:
-      - material: ORANGE_SHULKER_BOX
+      - material: "ORANGE_SHULKER_BOX"
         name: "&6Rifornimenti Supernova"
         contents:
-          - material: END_CRYSTAL
-            amount: 128
-          - material: OBSIDIAN
-            amount: 128
-          - material: TOTEM_OF_UNDYING
-            amount: 6
-          - material: ENCHANTED_GOLDEN_APPLE
-            amount: 8
-          - material: GOLDEN_APPLE
-            amount: 32
-          - material: ENDER_PEARL
-            amount: 16
-          - material: EXPERIENCE_BOTTLE
-            amount: 64
-          - material: COOKED_BEEF
-            amount: 64
-          - material: COBWEB
-            amount: 16
-          - material: SPLASH_POTION
-            potion: minecraft:strong_strength
-            amount: 2
-          - material: SPLASH_POTION
-            potion: minecraft:strong_swiftness
-            amount: 2
-          - material: SPLASH_POTION
-            potion: minecraft:long_slow_falling
-            amount: 2
-    commands: []
+          - {material: "END_CRYSTAL", amount: 128}
+          - {material: "OBSIDIAN", amount: 128}
+          - {material: "TOTEM_OF_UNDYING", amount: 6}
+          - {material: "ENCHANTED_GOLDEN_APPLE", amount: 8}
+          - {material: "GOLDEN_APPLE", amount: 32}
+          - {material: "ENDER_PEARL", amount: 16}
+          - {material: "EXPERIENCE_BOTTLE", amount: 64}
+          - {material: "COOKED_BEEF", amount: 64}
+          - {material: "COBWEB", amount: 16}
+          - {material: "SPLASH_POTION", amount: 2, potion: "strong_strength"}
+          - {material: "SPLASH_POTION", amount: 2, potion: "strong_swiftness"}
+          - {material: "SPLASH_POTION", amount: 2, potion: "long_slow_falling"}
 
-  # ============================================
-  # KIT 4: QUASAR
-  # ============================================
-  - id: "quasar"
+  quasar:
     display-name: "&d&lQuasar"
-    tier-label: "&5TIER IV - Crystal Warfare"
+    tier-label: "&dTIER IV - Crystal Warfare"
     description:
-      - "&7Kit da guerra con cristalli e tridente"
-      - "&7Arsenale completo per il dominio assoluto"
-    icon: BEACON
+      - "&7Guerra di cristalli avanzata"
+      - "&73 shulker box pieni"
+    icon: "BEACON"
     color-from: "#A78BFA"
     color-to: "#22D3EE"
     permission: "kit.quasar"
     default-permission: false
     cooldown: 1209600
     announce-claim: false
-    locked-hint: "&cDiventa una leggenda per ottenere il Quasar!"
-    delivery: mixed
+    locked-hint: "&cSblocca il rank Quasar"
+    delivery: "gear_direct_plus_3_shulkers"
     equipment:
-      helmet:
-        material: NETHERITE_HELMET
-        preset: P4U3M
-        enchants:
-          minecraft:respiration: 3
-          minecraft:aqua_affinity: 1
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      chestplate:
-        material: NETHERITE_CHESTPLATE
-        preset: P4U3M
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      leggings:
-        material: NETHERITE_LEGGINGS
-        preset: P4U3M
-        enchants:
-          minecraft:swift_sneak: 3
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      boots:
-        material: NETHERITE_BOOTS
-        preset: P4U3M
-        enchants:
-          minecraft:feather_falling: 4
-          minecraft:soul_speed: 3
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      offhand:
-        material: TOTEM_OF_UNDYING
-        amount: 1
+      helmet: {material: "NETHERITE_HELMET", preset: "P4U3M", enchants: {respiration: 3, aqua_affinity: 1}, mark: true}
+      chestplate: {material: "NETHERITE_CHESTPLATE", preset: "P4U3M", mark: true}
+      leggings: {material: "NETHERITE_LEGGINGS", preset: "P4U3M", enchants: {swift_sneak: 3}, mark: true}
+      boots: {material: "NETHERITE_BOOTS", preset: "P4U3M", enchants: {feather_falling: 4, soul_speed: 3}, mark: true}
+      offhand: {material: "TOTEM_OF_UNDYING"}
     items:
-      - material: NETHERITE_SWORD
-        name: "&dLama del Quasar"
-        lore:
-          - "&8| &fKit Quasar"
-        preset: SWORD_MAX
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      - material: NETHERITE_AXE
-        name: "&dAscia del Quasar"
-        lore:
-          - "&8| &fKit Quasar"
-        preset: AXE_MAX
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      - material: MACE
-        name: "&dMazza di Breccia"
-        lore:
-          - "&8| &fKit Quasar"
-        preset: MACE_BREACH
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      - material: TRIDENT
-        name: "&dTridente del Quasar"
-        lore:
-          - "&8| &fKit Quasar"
-        preset: ""
-        enchants:
-          minecraft:riptide: 3
-          minecraft:impaling: 5
-          minecraft:unbreaking: 3
-          minecraft:mending: 1
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      - material: CROSSBOW
-        name: "&dBalestra del Quasar"
-        lore:
-          - "&8| &fKit Quasar"
-        preset: ""
-        enchants:
-          minecraft:quick_charge: 3
-          minecraft:piercing: 4
-          minecraft:unbreaking: 3
-          minecraft:mending: 1
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      - material: BOW
-        name: "&dArco del Quasar"
-        lore:
-          - "&8| &fKit Quasar"
-        preset: BOW_MAX
-        mark: true
-        flags: [HIDE_ENCHANTS]
-      - material: ARROW
-        amount: 64
-      - material: ELYTRA
-        preset: UM
-        mark: true
-        flags: [HIDE_ENCHANTS]
-      - material: FIREWORK_ROCKET
-        amount: 64
-        firework-power: 3
-      - material: WIND_CHARGE
-        amount: 64
-      - material: SHIELD
-        preset: UM
-        mark: true
-        flags: [HIDE_ENCHANTS]
-      - material: WATER_BUCKET
-        amount: 1
+      - {material: "NETHERITE_SWORD", preset: "SWORD_MAX", mark: true}
+      - {material: "NETHERITE_AXE", preset: "AXE_MAX", mark: true}
+      - {material: "MACE", preset: "MACE_BREACH", mark: true}
+      - {material: "TRIDENT", enchants: {riptide: 3, impaling: 5, unbreaking: 3, mending: 1}, mark: true}
+      - {material: "CROSSBOW", enchants: {quick_charge: 3, piercing: 4, unbreaking: 3, mending: 1}, mark: true}
+      - {material: "BOW", preset: "BOW_MAX", mark: true}
+      - {material: "ARROW", amount: 64}
+      - {material: "ELYTRA", preset: "UM", mark: true}
+      - {material: "WIND_CHARGE", amount: 64}
+      - {material: "SHIELD", preset: "UM", mark: true}
+      - {material: "WATER_BUCKET", amount: 1}
     containers:
-      - material: LIGHT_BLUE_SHULKER_BOX
+      - material: "LIGHT_BLUE_SHULKER_BOX"
         name: "&bArsenale di Cristalli"
         contents:
-          - material: END_CRYSTAL
-            amount: 192
-          - material: OBSIDIAN
-            amount: 192
-          - material: RESPAWN_ANCHOR
-            amount: 64
-          - material: GLOWSTONE
-            amount: 128
-      - material: YELLOW_SHULKER_BOX
+          - {material: "END_CRYSTAL", amount: 192}
+          - {material: "OBSIDIAN", amount: 192}
+          - {material: "RESPAWN_ANCHOR", amount: 64}
+          - {material: "GLOWSTONE", amount: 128}
+      - material: "YELLOW_SHULKER_BOX"
         name: "&eScorta di Vita"
         contents:
-          - material: TOTEM_OF_UNDYING
-            amount: 12
-          - material: ENCHANTED_GOLDEN_APPLE
-            amount: 16
-          - material: GOLDEN_APPLE
-            amount: 64
-          - material: ENDER_PEARL
-            amount: 32
-          - material: EXPERIENCE_BOTTLE
-            amount: 128
-          - material: COOKED_BEEF
-            amount: 64
-      - material: PURPLE_SHULKER_BOX
+          - {material: "TOTEM_OF_UNDYING", amount: 12}
+          - {material: "ENCHANTED_GOLDEN_APPLE", amount: 16}
+          - {material: "GOLDEN_APPLE", amount: 64}
+          - {material: "ENDER_PEARL", amount: 32}
+          - {material: "EXPERIENCE_BOTTLE", amount: 128}
+          - {material: "COOKED_BEEF", amount: 64}
+      - material: "PURPLE_SHULKER_BOX"
         name: "&5Set Anti-Esplosione"
         contents:
-          - material: NETHERITE_HELMET
-            preset: BP4U3M
-            enchants:
-              minecraft:respiration: 3
-              minecraft:aqua_affinity: 1
-            mark: true
-            flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-          - material: NETHERITE_CHESTPLATE
-            preset: BP4U3M
-            mark: true
-            flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-          - material: NETHERITE_LEGGINGS
-            preset: BP4U3M
-            enchants:
-              minecraft:swift_sneak: 3
-            mark: true
-            flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-          - material: NETHERITE_BOOTS
-            preset: BP4U3M
-            enchants:
-              minecraft:feather_falling: 4
-              minecraft:soul_speed: 3
-            mark: true
-            flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-    commands: []
+          - {material: "NETHERITE_HELMET", preset: "BP4U3M", enchants: {respiration: 3, aqua_affinity: 1}, mark: true}
+          - {material: "NETHERITE_CHESTPLATE", preset: "BP4U3M", mark: true}
+          - {material: "NETHERITE_LEGGINGS", preset: "BP4U3M", enchants: {swift_sneak: 3}, mark: true}
+          - {material: "NETHERITE_BOOTS", preset: "BP4U3M", enchants: {feather_falling: 4, soul_speed: 3}, mark: true}
 
-  # ============================================
-  # KIT 5: BUCO NERO
-  # ============================================
-  - id: "buco_nero"
+  buco_nero:
     display-name: "&5&lBuco Nero"
-    tier-label: "&dTIER V - Leggendario"
+    tier-label: "&5&lTIER V - Leggendario"
     description:
-      - "&7Il kit supremo, leggenda vivente"
-      - "&7Potere cosmico infinito al tuo servizio"
-    icon: DRAGON_EGG
+      - "&7Il kit supremo, leggenda pura"
+      - "&74 shulker box, gear unico nominato"
+    icon: "DRAGON_EGG"
     color-from: "#E879F9"
     color-to: "#7C3AED"
     permission: "kit.buco_nero"
     default-permission: false
     cooldown: 2592000
     announce-claim: true
-    locked-hint: "&cSolo i più grandi guerrieri possono accedere al Buco Nero!"
-    delivery: mixed
+    locked-hint: "&cSblocca il rank Buco Nero"
+    delivery: "gear_direct_plus_4_shulkers"
     equipment:
-      helmet:
-        material: NETHERITE_HELMET
-        name: "&5Elmo dell'Orizzonte degli Eventi"
-        lore:
-          - "&8| &fKit Buco Nero"
-        preset: P4U3M
-        enchants:
-          minecraft:respiration: 3
-          minecraft:aqua_affinity: 1
-          minecraft:thorns: 3
-        trim:
-          pattern: minecraft:silence
-          material: minecraft:amethyst
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES, HIDE_ARMOR_TRIM]
-      chestplate:
-        material: NETHERITE_CHESTPLATE
-        name: "&5Corazza della Singolarità"
-        lore:
-          - "&8| &fKit Buco Nero"
-        preset: P4U3M
-        enchants:
-          minecraft:thorns: 3
-        trim:
-          pattern: minecraft:silence
-          material: minecraft:amethyst
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES, HIDE_ARMOR_TRIM]
-      leggings:
-        material: NETHERITE_LEGGINGS
-        name: "&5Gambrici del Vuoto"
-        lore:
-          - "&8| &fKit Buco Nero"
-        preset: P4U3M
-        enchants:
-          minecraft:swift_sneak: 3
-          minecraft:thorns: 3
-        trim:
-          pattern: minecraft:silence
-          material: minecraft:amethyst
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES, HIDE_ARMOR_TRIM]
-      boots:
-        material: NETHERITE_BOOTS
-        name: "&5Stivali dell'Abisso"
-        lore:
-          - "&8| &fKit Buco Nero"
-        preset: P4U3M
-        enchants:
-          minecraft:feather_falling: 4
-          minecraft:soul_speed: 3
-          minecraft:thorns: 3
-        trim:
-          pattern: minecraft:silence
-          material: minecraft:amethyst
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES, HIDE_ARMOR_TRIM]
-      offhand:
-        material: TOTEM_OF_UNDYING
-        amount: 1
+      helmet: {material: "NETHERITE_HELMET", preset: "P4U3M", enchants: {thorns: 3, respiration: 3, aqua_affinity: 1}, trim: {pattern: "silence", material: "amethyst"}, custom-name: "&8Elmo dell'Orizzonte degli Eventi", mark: true}
+      chestplate: {material: "NETHERITE_CHESTPLATE", preset: "P4U3M", enchants: {thorns: 3}, trim: {pattern: "silence", material: "amethyst"}, custom-name: "&8Corazza della Singolarita", mark: true}
+      leggings: {material: "NETHERITE_LEGGINGS", preset: "P4U3M", enchants: {thorns: 3, swift_sneak: 3}, trim: {pattern: "silence", material: "amethyst"}, custom-name: "&8Gambrerie del Vuoto", mark: true}
+      boots: {material: "NETHERITE_BOOTS", preset: "P4U3M", enchants: {thorns: 3, feather_falling: 4, soul_speed: 3}, trim: {pattern: "silence", material: "amethyst"}, custom-name: "&8Stivali dell'Abisso", mark: true}
+      offhand: {material: "TOTEM_OF_UNDYING"}
     items:
-      - material: NETHERITE_SWORD
-        name: "&5Singolarità"
-        lore:
-          - "&8| &fKit Buco Nero"
-        preset: SWORD_MAX
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      - material: NETHERITE_AXE
-        name: "&5Ascia del Collasso"
-        lore:
-          - "&8| &fKit Buco Nero"
-        preset: AXE_MAX
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      - material: MACE
-        name: "&5Collasso Gravitazionale"
-        lore:
-          - "&8| &fKit Buco Nero"
-        preset: MACE_BREACH
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      - material: MACE
-        name: "&5Massa Critica"
-        lore:
-          - "&8| &fKit Buco Nero"
-        preset: MACE_DENSITY
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      - material: TRIDENT
-        name: "&5Tridente dell'Orizzonte"
-        lore:
-          - "&8| &fKit Buco Nero"
-        preset: ""
-        enchants:
-          minecraft:riptide: 3
-          minecraft:impaling: 5
-          minecraft:unbreaking: 3
-          minecraft:mending: 1
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      - material: CROSSBOW
-        name: "&5Balestra del Vuoto"
-        lore:
-          - "&8| &fKit Buco Nero"
-        preset: ""
-        enchants:
-          minecraft:quick_charge: 3
-          minecraft:piercing: 4
-          minecraft:unbreaking: 3
-          minecraft:mending: 1
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
-      - material: BOW
-        name: "&5Arco della Singolarità"
-        lore:
-          - "&8| &fKit Buco Nero"
-        preset: BOW_MAX
-        mark: true
-        flags: [HIDE_ENCHANTS]
-      - material: ARROW
-        amount: 64
-      - material: ELYTRA
-        name: "&5Ali dell'Abisso"
-        lore:
-          - "&8| &fKit Buco Nero"
-        preset: UM
-        mark: true
-        flags: [HIDE_ENCHANTS]
-      - material: FIREWORK_ROCKET
-        amount: 128
-        firework-power: 3
-      - material: WIND_CHARGE
-        amount: 128
-      - material: SHIELD
-        name: "&5Scudo dell'Orizzonte"
-        lore:
-          - "&8| &fKit Buco Nero"
-        preset: UM
-        mark: true
-        flags: [HIDE_ENCHANTS]
-      - material: WATER_BUCKET
-        amount: 1
-      - material: NETHERITE_PICKAXE
-        name: "&5Piccone del Vuoto"
-        lore:
-          - "&8| &fKit Buco Nero"
-        preset: ""
-        enchants:
-          minecraft:efficiency: 5
-          minecraft:fortune: 3
-          minecraft:unbreaking: 3
-          minecraft:mending: 1
-        mark: true
-        flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES]
+      - {material: "NETHERITE_SWORD", preset: "SWORD_MAX", custom-name: "&5Singolarita", mark: true}
+      - {material: "NETHERITE_AXE", preset: "AXE_MAX", mark: true}
+      - {material: "MACE", preset: "MACE_BREACH", custom-name: "&8Collasso Gravitazionale", mark: true}
+      - {material: "MACE", preset: "MACE_DENSITY", custom-name: "&8Massa Critica", mark: true}
+      - {material: "TRIDENT", enchants: {riptide: 3, impaling: 5, unbreaking: 3, mending: 1}, mark: true}
+      - {material: "CROSSBOW", enchants: {quick_charge: 3, piercing: 4, unbreaking: 3, mending: 1}, mark: true}
+      - {material: "BOW", preset: "BOW_MAX", mark: true}
+      - {material: "ARROW", amount: 64}
+      - {material: "ELYTRA", preset: "UM", mark: true}
+      - {material: "WIND_CHARGE", amount: 128}
+      - {material: "SHIELD", preset: "UM", mark: true}
+      - {material: "WATER_BUCKET", amount: 1}
+      - {material: "NETHERITE_PICKAXE", enchants: {efficiency: 5, fortune: 3, unbreaking: 3, mending: 1}, mark: true}
     containers:
-      - material: BLACK_SHULKER_BOX
+      - material: "BLACK_SHULKER_BOX"
         name: "&8Nucleo - Cristalli"
         contents:
-          - material: END_CRYSTAL
-            amount: 384
-          - material: OBSIDIAN
-            amount: 384
-          - material: RESPAWN_ANCHOR
-            amount: 64
-          - material: GLOWSTONE
-            amount: 128
-      - material: PURPLE_SHULKER_BOX
+          - {material: "END_CRYSTAL", amount: 384}
+          - {material: "OBSIDIAN", amount: 384}
+          - {material: "RESPAWN_ANCHOR", amount: 64}
+          - {material: "GLOWSTONE", amount: 128}
+      - material: "PURPLE_SHULKER_BOX"
         name: "&5Orizzonte - Totem & Vita"
         contents:
-          - material: TOTEM_OF_UNDYING
-            amount: 16
-          - material: ENCHANTED_GOLDEN_APPLE
-            amount: 64
-          - material: GOLDEN_APPLE
-            amount: 64
-          - material: ENDER_PEARL
-            amount: 64
-          - material: EXPERIENCE_BOTTLE
-            amount: 128
-      - material: MAGENTA_SHULKER_BOX
+          - {material: "TOTEM_OF_UNDYING", amount: 16}
+          - {material: "ENCHANTED_GOLDEN_APPLE", amount: 64}
+          - {material: "GOLDEN_APPLE", amount: 64}
+          - {material: "ENDER_PEARL", amount: 64}
+          - {material: "EXPERIENCE_BOTTLE", amount: 128}
+      - material: "MAGENTA_SHULKER_BOX"
         name: "&dSet Anti-Esplosione"
         contents:
-          - material: NETHERITE_HELMET
-            preset: BP4U3M
-            enchants:
-              minecraft:respiration: 3
-              minecraft:aqua_affinity: 1
-              minecraft:thorns: 3
-            trim:
-              pattern: minecraft:silence
-              material: minecraft:amethyst
-            mark: true
-            flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES, HIDE_ARMOR_TRIM]
-          - material: NETHERITE_CHESTPLATE
-            preset: BP4U3M
-            enchants:
-              minecraft:thorns: 3
-            trim:
-              pattern: minecraft:silence
-              material: minecraft:amethyst
-            mark: true
-            flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES, HIDE_ARMOR_TRIM]
-          - material: NETHERITE_LEGGINGS
-            preset: BP4U3M
-            enchants:
-              minecraft:swift_sneak: 3
-              minecraft:thorns: 3
-            trim:
-              pattern: minecraft:silence
-              material: minecraft:amethyst
-            mark: true
-            flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES, HIDE_ARMOR_TRIM]
-          - material: NETHERITE_BOOTS
-            preset: BP4U3M
-            enchants:
-              minecraft:feather_falling: 4
-              minecraft:soul_speed: 3
-              minecraft:thorns: 3
-            trim:
-              pattern: minecraft:silence
-              material: minecraft:amethyst
-            mark: true
-            flags: [HIDE_ENCHANTS, HIDE_ATTRIBUTES, HIDE_ARMOR_TRIM]
-          - material: ELYTRA
-            preset: UM
-            mark: true
-            flags: [HIDE_ENCHANTS]
-      - material: GRAY_SHULKER_BOX
+          - {material: "NETHERITE_HELMET", preset: "BP4U3M", enchants: {respiration: 3, aqua_affinity: 1}, mark: true}
+          - {material: "NETHERITE_CHESTPLATE", preset: "BP4U3M", mark: true}
+          - {material: "NETHERITE_LEGGINGS", preset: "BP4U3M", enchants: {swift_sneak: 3}, mark: true}
+          - {material: "NETHERITE_BOOTS", preset: "BP4U3M", enchants: {feather_falling: 4, soul_speed: 3}, mark: true}
+          - {material: "ELYTRA", preset: "UM", mark: true}
+      - material: "GRAY_SHULKER_BOX"
         name: "&7Utility"
         contents:
-          - material: SPLASH_POTION
-            potion: minecraft:strong_strength
-            amount: 4
-          - material: SPLASH_POTION
-            potion: minecraft:strong_swiftness
-            amount: 4
-          - material: SPLASH_POTION
-            potion: minecraft:strong_healing
-            amount: 6
-          - material: SPLASH_POTION
-            potion: minecraft:long_fire_resistance
-            amount: 2
-          - material: COBWEB
-            amount: 64
-          - material: COOKED_BEEF
-            amount: 64
-    commands: []
+          - {material: "SPLASH_POTION", amount: 4, potion: "strong_strength"}
+          - {material: "SPLASH_POTION", amount: 4, potion: "strong_swiftness"}
+          - {material: "SPLASH_POTION", amount: 6, potion: "strong_healing"}
+          - {material: "SPLASH_POTION", amount: 2, potion: "long_fire_resistance"}
+          - {material: "COBWEB", amount: 64}
+          - {material: "COOKED_BEEF", amount: 64}

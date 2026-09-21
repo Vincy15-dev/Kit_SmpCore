@@ -1,0 +1,52 @@
+name: Kit_SmpCore
+version: '${project.version}'
+main: com.Kit_SmpCore.plugin.MainClass
+api-version: '1.21'
+description: Cosmic-themed kit system with 5 progression tiers
+author: YourName
+website: https://yourwebsite.com
+
+commands:
+  kit:
+    description: Apri la GUI dei kit o richiedi un kit specifico
+    usage: |
+      /kit - Apri la GUI principale
+      /kit <id> - Richiedi il kit specificato
+      /kit preview <id> - Anteprima del kit
+      /kit give <player> <id> - Dai un kit a un giocatore (admin)
+      /kit reset <player> <id|all> - Resetta cooldown/claim
+      /kit reload - Ricarica configurazioni
+    aliases: [kits, smpkit]
+    permission: kit.use
+
+permissions:
+  kit.use:
+    description: Permette di usare il comando /kit
+    default: true
+  kit.stella_nascente:
+    description: Accesso al kit Stella Nascente (Tier I)
+    default: true
+  kit.stella:
+    description: Accesso al kit Stella (Tier II)
+    default: false
+  kit.supernova:
+    description: Accesso al kit Supernova (Tier III)
+    default: false
+  kit.quasar:
+    description: Accesso al kit Quasar (Tier IV)
+    default: false
+  kit.buco_nero:
+    description: Accesso al kit Buco Nero (Tier V)
+    default: false
+  kit.admin:
+    description: Permessi amministrativi completi
+    default: op
+  kit.cooldown.bypass:
+    description: Ignora i cooldown dei kit
+    default: op
+  kit.cooldown.vip:
+    description: Riduzione cooldown 25%
+    default: false
+  kit.cooldown.mvp:
+    description: Riduzione cooldown 50%
+    default: false
