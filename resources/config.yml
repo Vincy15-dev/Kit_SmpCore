@@ -1,0 +1,71 @@
+# Kit_SmpCore - Configurazione Principale
+
+# Linguaggio dei messaggi
+language: "it"
+
+# GUI Settings
+gui:
+  # Titolo del menu principale
+  main-title: "&5&lCOSMOS &7&lKIT"
+  # Titolo del menu di anteprima (verrà aggiunto il nome del kit)
+  preview-title-prefix: "&5&lANTEPRIMA: "
+  # Slot per i 5 kit nel menu principale (0-53)
+  kit-slots: [20, 21, 22, 23, 24]
+  # Slot per l'item informativo (mappa stellare)
+  info-slot: 4
+  # Slot per il pulsante di chiusura
+  close-slot: 49
+  # Slot per le frecce di paginazione (se necessarie)
+  prev-page-slot: 48
+  next-page-slot: 50
+  # Slot decorativi per le "stelle" che brillano
+  star-slots: [0, 1, 2, 6, 7, 8, 9, 17, 18, 26, 27, 35, 36, 44, 45, 53]
+  # Colori delle stelle per l'effetto twinkling
+  star-colors: ["#FFFFFF", "#A78BFA", "#22D3EE", "#E879F9"]
+  # Materiale per il frame (vetro nero)
+  frame-material: BLACK_STAINED_GLASS_PANE
+  # Materiale per le frecce
+  arrow-material: ARROW
+  # Materiali per gli stati dei kit
+  kit-states:
+    available: GLOWSTONE_DUST
+    cooldown: CLOCK
+    locked: BARRIER
+    claimed: EMERALD
+
+# Suoni (chiavi registry vanilla)
+sounds:
+  gui-open: "ui.button.click"
+  gui-close: "ui.button.click"
+  claim-success: "entity.player.levelup"
+  claim-error: "entity.villager.no"
+  navigate: "ui.button.click"
+  claim-buco_nero: "entity.ender_dragon.growl"
+  twinkle: "block.note.block.pling"
+
+# Particelle per il claim
+particles:
+  claim-success: "SPELL_WITCH"
+  claim-buco_nero: "DRAGON_BREATH"
+
+# Riduzione cooldown per rank (percentuale)
+cooldown-reductions:
+  "kit.cooldown.vip": 25
+  "kit.cooldown.mvp": 50
+  # Verrà usata la percentuale più alta tra quelle possedute dal giocatore
+  # Max cap: 90%
+
+# Opzioni generali
+options:
+  # Kit dato al primo join (una tantum)
+  first-join-kit: "stella_nascente"
+  # Se dropare gli item a terra quando l'inventario è pieno
+  drop-at-feet-if-full: false
+  # Intervallo di salvataggio automatico in minuti (se ci sono dati modificati)
+  auto-save-interval-minutes: 5
+  # Tempo di debounce per i click in millisecondi
+  click-debounce-ms: 250
+  # Permetti enchant oltre il livello massimo (sconsigliato)
+  allow-unsafe-enchants: false
+  # Notifica nel chat al join se ci sono kit pronti
+  notify-on-join: true

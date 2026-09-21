@@ -1,0 +1,40 @@
+name: Kit_SmpCore
+version: '${project.version}'
+main: com.Kit_SmpCore.plugin.MainClass
+api-version: '1.21'
+description: Cosmic-themed kit system for SMP servers
+authors: [YourName]
+website: https://yourwebsite.com
+
+commands:
+  kit:
+    description: Apri il menu dei kit o richiedi un kit specifico
+    usage: |
+      /kit - Apri il menu principale
+      /kit <id> - Richiedi un kit specifico
+      /kit preview <id> - Anteprima di un kit
+      /kit give <player> <id> - Dai un kit a un giocatore (admin)
+      /kit reset <player> <id|all> - Resetta i cooldown/claim di un giocatore
+      /kit reload - Ricarica la configurazione
+    aliases: [kits, smpkit]
+    permission: kit.use
+
+permissions:
+  kit.use:
+    description: Permette di usare il comando /kit
+    default: true
+  kit.admin:
+    description: Permette di usare i comandi admin
+    default: op
+  kit.cooldown.bypass:
+    description: Ignora i cooldown dei kit
+    default: op
+  # Le permisson specifiche per ogni kit vengono registrate dinamicamente:
+  # kit.stella_nascente (default: true)
+  # kit.stella (default: false)
+  # kit.supernova (default: false)
+  # kit.quasar (default: false)
+  # kit.buco_nero (default: false)
+  # Riduzioni cooldown:
+  # kit.cooldown.vip (25%)
+  # kit.cooldown.mvp (50%)

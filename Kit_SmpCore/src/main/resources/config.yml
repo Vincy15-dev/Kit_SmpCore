@@ -1,0 +1,78 @@
+# Kit_SmpCore - Configurazione Principale
+# Sistema di kit a tema cosmico per server SMP
+
+# Lingua dei messaggi (attualmente solo italiano supportato)
+language: it
+
+# GUI Settings
+gui:
+  # Titolo del menu principale
+  main-title: "&5&lCOSMOS &7&l| &f&lKit Menu"
+  # Titolo del menu di anteprima
+  preview-title: "&5&lCOSMOS &7&l| &f&lAnteprima Kit"
+  # Slot per i kit nel menu principale (20-24 = centrati)
+  kit-slots: [20, 21, 22, 23, 24]
+  # Slot per l'item informativo (stella centrale)
+  info-slot: 4
+  # Slot per il pulsante chiudi
+  close-slot: 49
+  # Slot decorativi "stelle" che brillano
+  star-slots: [10, 12, 14, 16, 28, 30, 32, 34, 46, 48, 50, 52]
+  # Colori delle stelle per l'effetto twinkling
+  star-colors: ["&7", "&f", "&b", "&d"]
+  # Frame della GUI (vetri colorati)
+  frame:
+    material: BLACK_STAINED_GLASS_PANE
+    name: " "
+    accent-material: PURPLE_STAINED_GLASS_PANE
+
+# Materiali per gli stati degli icon dei kit
+kit-icons:
+  available:
+    material: NETHER_STAR
+    glint: true
+  cooldown:
+    material: CLOCK
+  locked:
+    material: BARRIER
+  claimed:
+    material: EMERALD_BLOCK
+
+# Suoni configurabili (chiavi registro vanilla)
+sounds:
+  gui-open: "ui.button.click"
+  gui-close: "ui.button.click"
+  kit-claim: "entity.player.levelup"
+  kit-claim-error: "entity.villager.no"
+  navigation: "ui.button.click"
+  buco_nero-claim: "block.end_portal.spawn"
+  countdown-tick: "block.note_block.pling"
+
+# Riduzione cooldown per rank (percentuale)
+# Usa la percentuale più alta tra quelle corrispondenti (non additiva)
+cooldown-reduction:
+  "kit.cooldown.vip": 25
+  "kit.cooldown.mvp": 50
+# Massimo riduzione: 90%
+max-cooldown-reduction: 90
+
+# Kit dato al primo join (una volta sola)
+first-join-kit: "stella_nascente"
+
+# Opzione per far cadere i kit a terra se l'inventario è pieno
+drop-at-feet-if-full: false
+
+# Messaggio quando l'inventario è pieno
+inventory-full-message: "&c[Kit] Inventario pieno! Libera &e{needed} &cslot(s). Hai &e{available} &cslot(s) liberi."
+
+# Intervallo di salvataggio automatico (minuti)
+auto-save-interval: 5
+
+# Permetti enchant oltre il livello massimo vanilla
+allow-unsafe-enchants: false
+
+# Debug mode (stampa warning dettagliati in console)
+debug: false
+
+# Comandi console eseguiti dopo ogni claim (%player% = nome giocatore)
+post-claim-commands: []
