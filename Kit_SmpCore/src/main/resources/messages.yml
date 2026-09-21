@@ -1,172 +1,87 @@
-# Kit_SmpCore - Messaggi in Italiano
-# Tutti i messaggi del plugin sono configurabili qui
+# Kit_SmpCore - Messages (Italian)
+prefix: "&5&l[&dCosmos&5&l] "
 
-# Prefisso per tutti i messaggi
-prefix: "&5&l[&dCOSMOS&5&l] &r"
-
-# Colori standard
-color-error: "&c"
-color-success: "&a"
-color-info: "&7"
-color-highlight: "&e"
-color-warning: "&6"
-
-# ============================================
-# MESSAGGI GENERALI
-# ============================================
-general:
-  reload-success: "&aConfigurazione ricaricata con successo!"
-  reload-error: "&cErrore durante il ricaricamento. Controlla la console."
-  no-permission: "&cNon hai il permesso di eseguire questo comando."
-  player-not-found: "&cGiocatore non trovato."
-  kit-not-found: "&cKit non trovato."
-  data-not-loaded: "&cDati non ancora caricati. Riprova tra pochi secondi."
-
-# ============================================
-# MESSAGGI GUI
-# ============================================
 gui:
-  main-title: "&5&lCOSMOS &7&l| &f&lKit Menu"
-  preview-title: "&5&lCOSMOS &7&l| &f&lAnteprima Kit"
-  
-  # Item informativo centrale
-  info-name: "&b&lMappa Stellare"
-  info-lore:
-    - "&7Kit pronti: &f{ready}/{total}"
+  info-item-name: "&b&lMappa Stellare"
+  info-item-lore:
+    - "&7Kit pronti: &a{READY}/5"
     - ""
-    - "&8=== &5Scala dei Tier &8==="
-    - "&e✦ TIER I - Diamond CPVP"
-    - "&3✦ TIER II - Netherite CPVP"
-    - "&4✦ TIER III - Elytra & Mace"
-    - "&5✦ TIER IV - Crystal Warfare"
-    - "&d✦ TIER V - Leggendario"
+    - "&7Scala dei Tier:"
+    - "&7  &6* &fStella Nascente"
+    - "&7  &b* &fStella"
+    - "&7  &c* &fSupernova"
+    - "&7  &d* &fQuasar"
+    - "&7  &5*&l &fBuco Nero"
     - ""
-    - "&7Sblocca kit superiori"
-    - "&7completando le missioni!"
-  
-  # Pulsante chiudi
-  close-name: "&cChiudi"
-  close-lore:
-    - "&7Clicca per chiudere il menu"
-  
-  # Stelle decorative
-  star-name: "{color}★"
-  
-  # Stati dei kit
-  kit-states:
-    available:
-      state-line: "&a&l✓ DISPONIBILE"
-      click-hint: "&eClicca sinistro per richiedere"
-    cooldown:
-      state-line: "&c&l⏱ IN ATTESA"
-      countdown-format: "&7Tempo rimanente: {time}"
-      progress-bar: "&8[{progress}&8]"
-      click-hint: "&7Attendi la fine del cooldown"
-    locked:
-      state-line: "&c&l🔒 BLOCCATO"
-      hint: "{hint}"
-      click-hint: "&7Ottieni il permesso necessario"
-    claimed:
-      state-line: "&e&l✓ RICHIESTO"
-      hint: "&7Kit monouso già reclamato"
-      click-hint: "&7Hai già richiesto questo kit"
-  
-  # Lore comune dei kit
-  kit-lore:
-    tier: "&8Tier: {tier}"
-    description: "{desc}"
-    contents-summary: "&7Contenuti: {summary}"
-    cooldown: "&8Cooldown: {cooldown}"
-    cooldown-reduced: "&8Cooldown (con rank): {cooldown}"
-    permission: "&8Permesso: {permission}"
+    - "&eClicca su un kit per reclamare"
+  close-item-name: "&c&lChiudi"
+  back-item-name: "&e&lIndietro"
+  claim-button-name: "&a&lRECLAMA ORA"
+  claim-button-lore:
+    - "&7Clicca per ricevere il kit"
+  available-lore:
+    - "{TIER}"
+    - "{DESCRIPTION}"
+    - ""
+    - "&7Contenuto: {CONTENT_SUMMARY}"
+    - "&7Cooldown: &a{COOLDOWN}"
+    - ""
+    - "&a&lSTATO: DISPONIBILE"
+    - "&eClick sinistro per reclamare"
+    - "&eClick destro per anteprima"
+  cooldown-lore:
+    - "{TIER}"
+    - "{DESCRIPTION}"
+    - ""
+    - "&7Contenuto: {CONTENT_SUMMARY}"
+    - "&7Cooldown: &c{COOLDOWN}"
+    - "&fProgresso: {PROGRESS_BAR}"
+    - ""
+    - "&c&lSTATO: IN COOLDOWN"
+    - "&7Tempo rimanente: {TIME_REMAINING}"
+  locked-lore:
+    - "{TIER}"
+    - "{DESCRIPTION}"
+    - ""
+    - "&c&lBLOCCATO"
+    - "{HINT}"
+    - ""
+    - "&7Ottieni il permesso &e{PERMISSION}"
+  claimed-lore:
+    - "{TIER}"
+    - "{DESCRIPTION}"
+    - ""
+    - "&7&lSTATO: GIA' RECLAMATO"
+    - "&7Kit one-time gia ottenuto"
 
-# ============================================
-# MESSAGGI CLAIM
-# ============================================
-claim:
-  success: "&aHai ricevuto il kit &e{kit}&a!"
-  success-title: "&d&lKIT RICEVUTO"
-  success-subtitle: "&7{kit_name}"
-  
-  # Annuncio server per buco_nero
-  broadcast: "&5&l*** {player} &dha ottenuto il leggendario kit &5Buco Nero&d! ***"
-  broadcast-title:
-    title: "&5&lLEGGENDE"
-    subtitle: "&d{player} entra nell'olimpo!"
-  
-  error:
-    cooldown: "&cQuesto kit è ancora in cooldown! &7({remaining})"
-    no-permission: "&cNon hai accesso a questo kit."
-    one-time-already-claimed: "&cHai già richiesto questo kit monouso."
-    inventory-full: "&cInventario pieno! Libera &e{needed} &cslot(s). Hai &e{available} &cslot(s) liberi."
-    data-not-loaded: "&cDati non caricati. Riprova tra poco."
-    kit-not-found: "&cKit non trovato."
-  
-  # Feedback visivi
-  particles: "HEART,END_ROD,PORTAL"
-  sound: "entity.player.levelup"
-  sound-buco-nero: "block.end_portal.spawn"
-
-# ============================================
-# MESSAGGI COMANDI
-# ============================================
 commands:
-  kit:
-    description: "&7Apri il menu dei kit o richiedi un kit specifico"
-    usage: |
-      &8Usage:
-      &7/kit &8- Apri il menu principale
-      &7/kit <id> &8- Richiedi un kit
-      &7/kit preview <id> &8- Anteprima di un kit
-      &7/kit give <player> <id> &8- Dai un kit (admin)
-      &7/kit reset <player> <id|all> &8- Resetta cooldown
-      &7/kit reload &8- Ricarica configurazione
-    
-  preview:
-    header: "&8=== &5Anteprima: {kit_name} &8==="
-    armor: "&8Armatura:"
-    weapons: "&8Armi:"
-    items: "&8Oggetti:"
-    shulkers: "&8Shulker:"
-    read-only: "&c[Solo lettura]"
-    claim-button: "&a&l[RICHIESTA KIT]"
-    claim-button-lore:
-      - "&7Clicca per ricevere il kit"
-    back-name: "&cIndietro"
-    back-lore:
-      - "&7Torna al menu principale"
-  
-  give:
-    success: "&aHai dato il kit &e{kit} &aa {player}."
-    sent: "&aHai ricevuto il kit &e{kit}&a da un amministratore!"
-  
-  reset:
-    success: "&aCooldown resettati per &e{player}&a."
-    success-single: "&aCooldown del kit &e{kit} &aresettato per &e{player}&a."
-    all: "&aTutti i cooldown sono stati resettati."
-  
-  reload:
-    success: "&aConfigurazione ricaricata!"
-    kits-loaded: "&7Caricati &e{kits} &7kit."
-    error: "&cErrore durante il reload. Vedi console."
+  kit-opened: "&aGUI dei kit aperta!"
+  kit-claimed: "&aHai reclamato il kit &e{KIT}&a!"
+  kit-cooldown: "&cNon puoi ancora reclamare questo kit! Attendi: &e{TIME}"
+  kit-no-permission: "&cNon hai il permesso per questo kit!"
+  kit-one-time-claimed: "&cHai gia reclamato questo kit (one-time)!"
+  kit-not-found: "&cKit non trovato: &e{KIT}"
+  kit-no-space: "&cInventario pieno! Ti servono &e{NEEDED} &cslot liberi, ne hai &e{HAVE}&c."
+  kit-drop-at-feet: "&eGli item sono stati lasciati ai tuoi piedi per mancanza di spazio."
+  kit-data-not-loaded: "&cDati non ancora caricati. Riprova tra poco..."
+  admin-give-success: "&aKit &e{KIT} &adato a &e{PLAYER}&a!"
+  admin-reset-success: "&aCooldown/claim resettati per &e{PLAYER} &a(kit: {KIT})"
+  admin-reload-success: "&aConfigurazioni ricaricate con successo!"
+  admin-reload-warning: "&eAttenzione: Alcuni giocatori potrebbero avere GUI aperte."
 
-# ============================================
-# MESSAGGI JOIN
-# ============================================
 join:
-  kits-ready: "&aHai &e{count} &akit pronti da richiedere!"
-  click-to-open: "&e[Clicca qui]&7 per aprire il menu kit"
-  first-join-kit-given: "&aHai ricevuto il kit iniziale &eStella Nascente&a!"
+  kits-ready: "&aHai &e{COUNT} &akit pronti da reclamare!"
+  click-to-open: "&e[Clicca qui]"
+  first-join-given: "&aTi e stato dato il kit iniziale: &e{KIT}&a!"
 
-# ============================================
-# FORMATI TEMPORALI
-# ============================================
-time:
-  format:
-    days: "{d}g"
-    hours: "{h}h"
-    minutes: "{m}m"
-    seconds: "{s}s"
-  just-now: "ora"
-  one-time: "Monouso"
-  no-cooldown: "Nessuno"
+claim:
+  title: "&6&l{KIT} RECLAMATO!"
+  subtitle: "&7Buon divertimento!"
+  chat: "&a+ Ricevuto kit &e{KIT}"
+  broadcast: "&5&l*** &d{PLAYER} &5ha reclamato il leggendario &5Buco Nero&5! ***"
+
+errors:
+  console-only: "&cQuesto comando puo essere eseguito solo dalla console!"
+  player-not-found: "&cGiocatore non trovato: &e{PLAYER}"
+  invalid-kit: "&cKit invalido: &e{KIT}"
+  gui-open: "&cNon puoi farlo mentre hai una GUI aperta!"

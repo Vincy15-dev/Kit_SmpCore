@@ -1,33 +1,36 @@
 ```
-# Compiled and build artifacts
+# Compiled Java files
 *.class
-*.o
-*.obj
-*.out
+
+# Maven build artifacts
 target/
 
-# Dependencies
-.mypy_cache/
-.pytest_cache/
-.coverage
-coverage/
-htmlcov/
+# IDE files
+.idea/
+*.iml
+*.ipr
+*.iws
 
-# Logs and temp files
+# Log files
 *.log
-*.tmp
-*.swp
 
-# Environment
+# Temporary files
+*.tmp
+*.temp
+
+# Environment files
 .env
 .env.local
 *.env.*
 
-# Editors
-.vscode/
-.idea/
-
-# System files
+# OS specific files
 .DS_Store
 Thumbs.db
+
+# Build system caches
+.gradle/
+.mypy_cache/
+.pytest_cache/
+coverage/
+htmlcov/
 ```
